@@ -1,45 +1,86 @@
-#corogame
-{
-	background-color: pink;
-	height: 80vh;
-	width: 90vw;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-}
-#clickzone
-{
-	background-color: green;
-	height: 80vh;
-	width: 25vw;
+/*------------------------------------------------HEADER GENERAL---------------------------------------------------------*/
+
+.sectionhead {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#mid
-{
-	background-color: cyan;
-	height: 80vh;
-	width: 25vw;
+.imglogohead {
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 100%;
+    padding: 30px;
 }
 
-#right
-{
-	background-color: red;
-	height: 80vh;
-	width: 25vw;
+.imagelogo2 {
+    height: 20%;
+    width: 20%;
 }
-.c-titre
-{
-	width: 100%;
-	display: inline-block;
-	text-align: center;
+
+.navigationhead {
+    display: inline-block;
+    background-color: #AAC6A1;
+    justify-content: center;
+    display: flex;
 }
-.sous-zone
-{
-	width: 100%;
-	height: 90%;
+
+.navigationhead a {
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
 }
-.hum
-{
-	
+
+.navigationhead a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F0D66E;
 }
+
+
+/*------------------------------------------------CORONACLICKER---------------------------------------------------------*/
+
+#corogame {
+    background-color: pink;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#clickzone {
+    background-color: green;
+    height: 80vh;
+    width: 25vw;
+}
+
+#mid {
+    background-color: cyan;
+    height: 80vh;
+    width: 25vw;
+}
+
+#right {
+    background-color: red;
+    height: 80vh;
+    width: 25vw;
+}
+
+.c-titre {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.sous-zone {
+    width: 100%;
+    height: 90%;
+}
+
+.hum {}
