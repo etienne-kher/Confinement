@@ -1,0 +1,45 @@
+#corogame
+{
+	background-color: pink;
+	height: 80vh;
+	width: 90vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+#clickzone
+{
+	background-color: green;
+	height: 80vh;
+	width: 25vw;
+}
+
+#mid
+{
+	background-color: cyan;
+	height: 80vh;
+	width: 25vw;
+}
+
+#right
+{
+	background-color: red;
+	height: 80vh;
+	width: 25vw;
+}
+.c-titre
+{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.sous-zone
+{
+	width: 100%;
+	height: 90%;
+}
+.hum
+{
+	
+}
