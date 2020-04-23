@@ -12,6 +12,7 @@
 </head>
 
 <body id="cuis">
+<?php include('header.php'); ?>
     <main id="fullkitchen">
 
         <h1 class="kitch"> KITCHEN WORLD! <br> les recettes venus d'ailleurs que vous pouvez faire chez vous</h1>
@@ -108,7 +109,7 @@
    
 
     </main>
-
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

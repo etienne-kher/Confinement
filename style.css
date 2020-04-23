@@ -1,68 +1,111 @@
-#corogame
-{
-	background-color: pink;
-	height: 80vh;
-	width: 90vw;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-}
-#clickzone
-{
-	background-color: green;
-	height: 80vh;
-	width: 25vw;
+/*------------------------------------------------HEADER GENERAL---------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding-bottom: 120px;
 }
 
-#mid
-{
-	background-color: cyan;
-	height: 80vh;
-	width: 25vw;
+.sectionhead {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#right
-{
-	background-color: red;
-	height: 80vh;
-	width: 25vw;
+.imglogohead {
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 100%;
+    padding: 30px;
 }
-.c-titre
-{
-	width: 100%;
-	display: inline-block;
-	text-align: center;
+
+.imagelogo2 {
+    height: 20%;
+    width: 20%;
 }
-.sous-zone
-{
-	width: 100%;
-	height: 90%;
+
+.navigationhead {
+    display: inline-block;
+    background-color: #AAC6A1;
+    justify-content: center;
+    display: flex;
 }
-.hum
-{
-	
+
+.navigationhead a {
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
 }
+
+.navigationhead a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F0D66E;
+}
+
+#corogame {
+    background-color: pink;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#clickzone {
+    background-color: green;
+    height: 80vh;
+    width: 25vw;
+}
+
+#mid {
+    background-color: cyan;
+    height: 80vh;
+    width: 25vw;
+}
+
+#right {
+    background-color: red;
+    height: 80vh;
+    width: 25vw;
+}
+
+.c-titre {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.sous-zone {
+    width: 100%;
+    height: 90%;
+}
+
+.hum {}
+
+
 /* page Michael */
-*{
+
+* {
     margin: 0;
     padding: 0;
+}
 
-}
-#cuis{
+#cuis {
     background-color: #CC9E80;
-    
-    
 }
-#fullkitchen
-{
+
+#fullkitchen {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.kitch
-{
+.kitch {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
     color: white;
@@ -70,81 +113,109 @@
     margin: 10px;
     font-size: 40px;
 }
-.txt1{font-family: 'Acme', sans-serif;;
+
+.txt1 {
+    font-family: 'Acme', sans-serif;
+    ;
     text-align: center;
 }
-.int{
+
+.int {
     font-family: arial;
     text-align: center;
     margin: 10px;
     text-decoration: underline;
 }
 
-
-.mafe
-{
+.mafe {
     display: flex;
     flex-direction: row;
 }
-.imgmaf img
-{
-    border-radius: 50px 50px 50px 50px ;
+
+.imgmaf img {
+    border-radius: 50px 50px 50px 50px;
 }
 
-.txtmaf
-{
+.txtmaf {
     margin-left: 10px;
     font-family: 'Acme', sans-serif;
 }
-.aloko
-{
+
+.aloko {
     display: flex;
     flex-direction: row;
 }
-#imgalok img
-{
-    border-radius: 50px 50px 50px 50px ;
-}
-.tktalok
-{
-    font-family: 'Acme', sans-serif;
-    margin-left: 10px; 
-}
-.fulm
-{
-    display: flex;
-    flex-direction: row ;
-}
-#egyma img
-{
-    border-radius: 50px 50px 50px 50px ;
+
+#imgalok img {
+    border-radius: 50px 50px 50px 50px;
 }
 
-.txtful
-{
+.tktalok {
+    font-family: 'Acme', sans-serif;
+    margin-left: 10px;
+}
+
+.fulm {
+    display: flex;
+    flex-direction: row;
+}
+
+#egyma img {
+    border-radius: 50px 50px 50px 50px;
+}
+
+.txtful {
     margin-left: 10px;
     font-family: 'Acme', sans-serif;
 }
-.titr
-{
-    
+
+.titr {
     text-decoration: underline;
     text-align: center;
 }
-#atievideo
-{
-    text-align: center;
-}
-#atievideo iframe
-{
-    text-align: center;
-}
-    
 
-.linkc
-{     
-   
+#atievideo {
+    text-align: center;
+}
+
+#atievideo iframe {
+    text-align: center;
+}
+
+.linkc {
     text-decoration: none;
-    color:#F0D66E;
-    
+    color: #F0D66E;
+}
+
+
+/*------------------------------------------------FOOTER GENERAL---------------------------------------------------------*/
+
+.footer {
+    background-color: #F0D66E;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer p:hover .premier {
+    display: none;
+}
+
+.footer p:hover .deuxieme {
+    display: inline;
+}
+
+.deuxieme {
+    display: none;
+}
+
+.footer a {
+    text-decoration: none;
 }
