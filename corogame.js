@@ -53,13 +53,13 @@
 	function jeu() 
 	{
 		
-		setInterval( tp, 1000);
-		setInterval( masqueplus, 10000);
-		setInterval(prodvac,10000);
-		setInterval(vacination,20000)
-		setInterval( mort, 30000);
-		setInterval( resp, 40000);  
-		setInterval(cont,10000);  	
+		xa=setInterval( tp, 1000);
+		xb=setInterval( masqueplus, 10000);
+		xc=setInterval(prodvac,10000);
+		xd=setInterval(vacination,20000)
+		xe=setInterval( mort, 30000);
+		xf=setInterval( resp, 40000);  
+		xg=setInterval(cont,10000);  	
 	}
 	function tp()
 	{
@@ -194,12 +194,28 @@
 		window.document.getElementById('pquar').innerHTML=ptquar;
 		window.document.getElementById('pvac').innerHTML=pvac;
 	}
+	function deb()
+	{	window.document.getElementById('c-cach').hidden=false;
+		window.document.getElementById('c-deb').hidden=true;
+		jeu();
+	}
 	function win()
-	{
-		
+	{	
+		clearInterval(xa);
+		clearInterval(xb);
+		clearInterval(xc);
+		clearInterval(xd);
+		clearInterval(xe);
+		clearInterval(xf);
+		clearInterval(xg);
+		score=ptotal;
+		window.document.getElementById('c-cach').hidden=true;
+		window.document.getElementById('c-win').hidden=false;
+		window.document.getElementById('c-score').innerHTML=score;
 	}
 	function loser()
 	{
-
+		window.document.getElementById('c-cach').hidden=true;
+		window.document.getElementById('c-los').hidden=false;
 	}
-//jeu();
+

@@ -9,8 +9,26 @@
 <body>
 <main id="c-main">
 	<h1 id="c-title">Coronaclicker</h1>
-	<div id="c-deb">
-		
+	<div   onclick="deb()" id="c-deb" class="c-tttt">
+		<p>Combatez le virus depuis chez vous !</p>
+		<p>2033 : il ne reste plus que 1000 habitant en france dont seulment deux ont la posibilité de sortire . Les temps ont bien changé les masques de protection étant devenu pratiquement une monnaie local. Mais vous seul  allez devoir organiser la gestion des services qui vous permeterons de sortire la population du confinement.
+		</p>
+		<ul>
+			<li>Les ouvrier produises des masques</li>
+			<li>Les medecin produise des respirateur ,qui vous permeterons de reduire le nombre de victimes</li>
+			<li>Les cherchereur essaient de de trouver un remede</li>
+			<li>Si les chercheurs trouvent un vaccin, les comuniquands vous aideront à rependre le vacin</li>
+			<li>Les battiment sont limité à 20 personnes maximum</li>	
+		</ul>
+		<button onclick="deb()">Comencer</button>
+	</div>
+	<div class="c-tttt"  id="c-win" hidden="true">
+		<p>Felicitation vous avez sauvé <b id=c-score></b> personnes</p>
+		<button  onclick="window.location.href = 'Coronaclicker.php';" >Recomencer</button>
+	</div>
+	<div class="c-tttt" id="c-los" hidden="true">
+		<p>Perdu tout les confinées sont morts</p>
+		<button  onclick="window.location.href = 'Coronaclicker.php';" >Recomencer</button>
 	</div>
 	<div id="c-cach" hidden="true">
 	<div id="corogame">

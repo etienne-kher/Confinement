@@ -6,6 +6,7 @@
     align-items: center;
     background-color: #CC9E80;
     padding-bottom: 3%; 
+    min-height: 50vh;
 }
 #c-title
 {
@@ -14,10 +15,44 @@
 	color: #AAC6A1;
 	text-shadow: 2px 2px 3px black;
 }
-#c-deb
+#c-deb>p
 {
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	padding: 1%;
+}
+#c-deb>ul
+{
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	
 }
+#c-deb>button,#c-win>button,#c-los>button
+{
+	margin: auto;
+	display: block;
+	margin-bottom: 2%; 
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 2vw;
+	background-color: cornsilk;
+}
+
+.c-tttt
+{
+	box-shadow: 2px 2px 3px black;
+	background-color: #5F807D;
+	width: 80%;
+	font-size: 2vw;
+	color: aliceblue;
+	text-shadow: 1px 1px 3px black;
+}
+
+#c-win>p,#c-los>p
+{
+	text-align: center;
+}
+
 #corogame
 {	border: 1px solid black;
 	background:url('images/back-coro.jpg');
@@ -111,4 +146,9 @@
 .c-numb
 {
 	font-size: 3vw;
+}
+
+.c-tttt
+{
+
 }
