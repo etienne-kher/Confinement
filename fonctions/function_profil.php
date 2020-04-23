@@ -6,9 +6,11 @@ class profile
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $db = "boutique";
+    private $db = "rush";
 
 
+   
+        
     public function modif_profil($login, $email, $prenom, $nom, $password)
     {
         $connexion = mysqli_connect($this->host, $this->username, $this->password, $this->db);
@@ -26,7 +28,7 @@ class profile
                     $sql = "UPDATE utilisateurs SET login = '".$_POST['login']."' WHERE id = '".$_SESSION['id']."'";
                     mysqli_query($connexion, $sql);
                     $_SESSION['login'] = $_POST['login'];
-                    echo "Vos données bien été modifié !";
+                  
                 }
                 else
                 {
@@ -39,7 +41,7 @@ class profile
                 $passe = password_hash($_POST['passe'], PASSWORD_DEFAULT);
                 $sql = "UPDATE utilisateurs SET password = '$passe' WHERE id = '".$_SESSION['id']."'";
                 mysqli_query($connexion, $sql);
-                echo "Vos données bien été modifié !";
+                
 
             }
 
@@ -47,14 +49,14 @@ class profile
             {
                 $sql = "UPDATE utilisateurs SET prenom ='".$_POST['prenom']."' WHERE id = '".$_SESSION['id']."'";
                 mysqli_query($connexion, $sql);
-                echo "Vos données bien été modifié !";
+                
             }
 
             if($_POST['nom'] != $nom)
             {
                 $sql = "UPDATE utilisateurs SET nom = '".$_POST['nom']."' WHERE id = '".$_SESSION['id']."'";
                 mysqli_query($connexion, $sql);
-                echo "Vos données bien été modifié !";
+                
             }
             
             if($_POST['email'] != $email)
@@ -69,7 +71,7 @@ class profile
                     {
                         $sql = "UPDATE utilisateurs SET email = '".$_POST['email']."' WHERE id = '".$_SESSION['id']."'";
                         mysqli_query($connexion	, $sql);
-                        echo "Vos données bien été modifié !";
+                        
                     }
                     else
                     {
@@ -81,7 +83,7 @@ class profile
                     echo "Veuillez remplir correctement votre email";
                 }
             }
-           
+            header('location: profil.php'); 
         }
     }
 
