@@ -13,7 +13,7 @@ session_start();
 
     <body id="body_index">
      
-            <?php include ('header.php'); ?>
+          
     
 	    <section id="section_index">
 
