@@ -38,8 +38,22 @@
 {
 	width: 100%;
 	height: 90%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 .hum
 {
-	
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+.c-secin
+{
+	width: 100%;
+}
+.c-secin>img
+{
+	width: 30%;
 }

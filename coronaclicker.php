@@ -47,20 +47,24 @@
 			<b class="c-titre">Personel</b>
 			<div id="cz3" class="sous-zone">
 				<section onclick="ajouter(travailleur)" id="cl-nbtrav" class="hum">
-					travailleurs non confiné : <span id="nbtrav">1</span>
-					<b class="primasq"> cout : 1 m</b>
+					<div class="c-secin"><img src="images/c-trav.png" ><b class="primasq"> cout : 1 m</b></div>
+					Travailleurs non confiné  <span id="nbtrav">1</span>
+					
 				</section>
 				<section onclick="ajouter(medecin)"  id="cl-nbmed" class="hum">
-					medecins : <span id="nbmed">1</span>
-					<b class="primasq"> cout : 3 m</b>
+					<div class="c-secin"><img src="images/c-doct.png" ><b class="primasq"> cout : 3 m</b></div>
+					Medecins  <span id="nbmed">1</span>
+					
 				</section>
 				<section onclick="ajouter(scientifique)" id="cl-nbsci" class="hum">
-					scientifiques : <span id="nbsci">0</span>
-					<b class="primasq"> cout : 5 m</b>
+					<div class="c-secin"><img src="images/c-cher.png" ><b class="primasq"> cout : 5 m</b></div>
+					Scientifiques  <span id="nbsci">0</span>
+					
 				</section>
 				<section onclick="ajouter(comuniquant)"  id="cl-nbcom" class="hum">
-					comuniquants : <span id="nbcom">0</span>
-					<b class="primasq"> cout : 10 m</b>
+					<div class="c-secin"><img src="images/c-jour.png" ><b class="primasq"> cout : 10 m</b></div>
+					Comuniquants  <span id="nbcom">0</span>
+					
 				</section>	
 			</div>
 			
