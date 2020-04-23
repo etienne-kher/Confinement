@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!doctype html>
 <html>
@@ -18,12 +16,13 @@ session_start();
 	    <section id="section_index">
 
             <?php
-                $connexion = mysqli_connect('localhost','root','','rush');
-                $sql = "SELECT login FROM utilisateurs WHERE id = '".$_SESSION['id']."'";
-                $query = mysqli_query($connexion,$sql);
-
+               
                 if(isset($_SESSION['login']))
-                {
+                { 
+                     $connexion = mysqli_connect('localhost','root','','rush');
+                     $sql = "SELECT login FROM utilisateurs WHERE id = '".$_SESSION['id']."'";
+                     $query = mysqli_query($connexion,$sql);
+
                 echo "<h1 id='h1_acc'>Salut, ".$_SESSION['login']." ! Tu peux maintenant acceder au fil de discussion !</h1>";
                 
                 }
