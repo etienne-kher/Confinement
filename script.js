@@ -1,10 +1,10 @@
 function show() {
-    var p = document.getElementById('pwd');
+    var p = document.getElementsByid('pwd');
     p.setAttribute('type', 'text');
 }
 
 function hide() {
-    var p = document.getElementById('pwd');
+    var p = document.getElementsByid('pwd');
     p.setAttribute('type', 'password');
 }
 

@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['login']) || !isset($_SESSION['password'])){}
-	else
-	{
-		header('Location: index.php');
-	}
+	//if(!isset($_SESSION['login']) || !isset($_SESSION['password'])){}
+	//else
+	//{
+		//header('Location: index.php');
+	//}
 	require "fonctions/function_co_ins.php";
 	$var = new connexion_inscription;
 ?>
@@ -13,29 +13,69 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css"/>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" async='true'></script>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="script.js" async='true'></script>
 		<title>Inscription</title>
 	</head>
 	
-	<body>
+	<body id="body_inscription"	>
 		<header>
 			
 		</header>
 		
 		<main>
 			<section>
-				<form method="post">
-					<fieldset>
-						<legend>INSCRIPTION</legend>
-						<input type="text" name="login" placeholder="LOGIN"/>
-						<input type="mail" name="email" placeholder="E-MAIL"/>
-						<input type="text" name="prenom" placeholder="PRENOM"/>
-						<input type="text" name="nom" placeholder="NOM"/>
-						<input type="password" name="passe" placeholder="MOT DE PASSE"/>
-						<input type="password" name="passe2" placeholder="CONFIRMATION MOT DE PASSE"/>
-						<input type="submit" value="INSCRIPTION" name="inscription"/>
-						<input type="submit" value="CONNEXION" name="connexion"/>
-					</fieldset>
-				</form>
+			<div class="overlay">
+				<form id="form_connexion" method="post">
+					<div class="con">
+						<header class="head-form">
+							<h2>Log In</h2>
+							<p id="p_headerco">Connecte-toi pour pouvoir acceder au fil de discussion</p>
+						</header>
+						<br>
+						<div class="field-set">
+								<span class="input-item">
+								<i class="fa fa-user-circle"></i>
+								</span>
+								<input class="form-input" id="txt-input" type="text" name="login" placeholder="LOGIN" required>
+							<br>
+								<span class="input-item">
+								<i class="fa fa-user-circle"></i>
+								</span>
+								<input class="form-input" id="txt-input" type="mail" name="email" placeholder="E-MAIL" required>
+							<br>
+								<span class="input-item">
+								<i class="fa fa-user-circle"></i>
+								</span>
+								<input class="form-input" id="txt-input" type="text" name="prenom" placeholder="PRENOM" required>
+							<br>
+								<span class="input-item">
+								<i class="fa fa-user-circle"></i>
+								</span>
+								<input class="form-input" id="txt-input" type="text" name="nom" placeholder="NOM" required>
+							<br>
+								
+							<span class="input-item">
+								<i class="fa fa-key"></i>
+							</span>
+							<input class="form-input" type="password" placeholder="MOT DE PASSE" id="pwd"  name="passe" required>
+							<span>
+								<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"><img src="images/passe.png" width="17px"></i>
+							</span>
+							<br>
+							<input class="form-input" type="password" placeholder="CONFIRMATION MOT DE PASSE" id="pwd"  name="passe2" required>
+							<span>
+								<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"><img src="images/passe.png" width="17px"></i>
+							</span>
+							<br>
+							<input id="connexion_submit" class="button_connexion" type="submit" value="CONNEXION" name="Connexion" class="log-in">  
+						</div>
+						<div class="other">
+							<input type="submit" class="button_connexion" value="INSCRIPTION" name="inscription" class="btn submits sign-up"></input>
+							<i class="fa fa-user-plus" aria-hidden="true"></i>
+						</div>
+			</div>	
 				<?php
 					$var->inscription();
 				?>
@@ -47,3 +87,4 @@
 		</footer>
 	</body>
 </html>
+
