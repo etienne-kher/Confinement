@@ -1,30 +1,68 @@
-#corogame
+#c-main
 {
-	background-color: pink;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CC9E80;
+    padding-bottom: 3%; 
+}
+#c-title
+{
+	font-family: 'Acme', sans-serif;
+	font-size: 3VW;
+	color: #AAC6A1;
+	text-shadow: 2px 2px 3px black;
+}
+#c-deb
+{
+	
+}
+#corogame
+{	border: 1px solid black;
+	background:url('images/back-coro.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
 	height: 80vh;
 	width: 90vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-shadow: 1px 1px 3px #FFF;
+	padding: 2%;
 }
+#corogame>div
+{
+	box-shadow: 2px 2px 3px black;
+	transition: box-shadow 1s ,transform 1s;
+	padding: 1%;
+}
+
+#corogame>div:hover
+{
+	box-shadow: 2px 2px 10px black;
+	transform: scale(1.01);
+}
+
 #clickzone
 {
-	background-color: green;
+	background-color: #D2C8C199;
 	height: 80vh;
 	width: 25vw;
 }
 
 #mid
 {
-	background-color: cyan;
+	background-color: #D2C8C199;
 	height: 80vh;
 	width: 25vw;
 }
 
 #right
 {
-	background-color: red;
+	background-color: #D2C8C199;
 	height: 80vh;
 	width: 25vw;
 }
@@ -33,6 +71,13 @@
 	width: 100%;
 	display: inline-block;
 	text-align: center;
+	font-size: 2.5vw;
+	padding: 1%;
+}
+#cz1>p
+{
+	font-size: 1.7vw;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .sous-zone
 {
@@ -42,18 +87,28 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	cursor: pointer;
 }
 .hum
 {
 	width: 90%;
 	display: flex;
-	flex-direction: column;
+	flex-direction:row;
+	font-size: 2vw;
 }
 .c-secin
 {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around; 
+	flex-direction: column;
 }
 .c-secin>img
 {
-	width: 30%;
+	width: 50%;
+}
+.c-numb
+{
+	font-size: 3vw;
 }
