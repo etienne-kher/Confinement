@@ -13,7 +13,7 @@ session_start();
 
     <body id="body_index">
      
-          
+        <?php include "header.php"; ?>
     
 	    <section id="section_index">
 
@@ -36,6 +36,7 @@ session_start();
 
 		
 		
-	</section>
+    </section>
+    <?php include "footer.php"; ?>
 </body>
 </html>

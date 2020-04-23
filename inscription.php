@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	//if(!isset($_SESSION['login']) || !isset($_SESSION['password'])){}
-	//else
-	//{
-		//header('Location: index.php');
-	//}
+	if(!isset($_SESSION['login']) || !isset($_SESSION['password'])){}
+	else
+	{
+		header('Location: index.php');
+	}
 	require "fonctions/function_co_ins.php";
 	$var = new connexion_inscription;
 ?>
@@ -20,9 +20,8 @@
 	</head>
 	
 	<body id="body_inscription"	>
-		<header>
-			
-		</header>
+	
+		<?php include "header.php"; ?>
 		
 		<main>
 			<section>
@@ -38,38 +37,37 @@
 								<span class="input-item">
 								<i class="fa fa-user-circle"></i>
 								</span>
-								<input class="form-input" id="txt-input" type="text" name="login" placeholder="LOGIN" required>
+								<input class="form-input" id="txt-input" type="text" name="login" placeholder="LOGIN">
 							<br>
 								<span class="input-item">
 								<i class="fa fa-user-circle"></i>
 								</span>
-								<input class="form-input" id="txt-input" type="mail" name="email" placeholder="E-MAIL" required>
+								<input class="form-input" id="txt-input" type="mail" name="email" placeholder="E-MAIL">
 							<br>
 								<span class="input-item">
 								<i class="fa fa-user-circle"></i>
 								</span>
-								<input class="form-input" id="txt-input" type="text" name="prenom" placeholder="PRENOM" required>
+								<input class="form-input" id="txt-input" type="text" name="prenom" placeholder="PRENOM">
 							<br>
 								<span class="input-item">
 								<i class="fa fa-user-circle"></i>
 								</span>
-								<input class="form-input" id="txt-input" type="text" name="nom" placeholder="NOM" required>
+								<input class="form-input" id="txt-input" type="text" name="nom" placeholder="NOM">
 							<br>
 								
 							<span class="input-item">
 								<i class="fa fa-key"></i>
 							</span>
-							<input class="form-input" type="password" placeholder="MOT DE PASSE" id="pwd"  name="passe" required>
+							<input class="form-input" type="password" placeholder="MOT DE PASSE" id="pwd"  name="passe">
 							<span>
 								<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"><img src="images/passe.png" width="17px"></i>
 							</span>
 							<br>
-							<input class="form-input" type="password" placeholder="CONFIRMATION MOT DE PASSE" id="pwd"  name="passe2" required>
+							<input class="form-input" type="password" placeholder="CONFIRMATION MOT DE PASSE" id="pwd"  name="passe2">
 							<span>
 								<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"><img src="images/passe.png" width="17px"></i>
 							</span>
 							<br>
-							<input id="connexion_submit" class="button_connexion" type="submit" value="CONNEXION" name="Connexion" class="log-in">  
 						</div>
 						<div class="other">
 							<input type="submit" class="button_connexion" value="INSCRIPTION" name="inscription" class="btn submits sign-up"></input>
@@ -82,9 +80,8 @@
 			</section>
 		</main>
 			
-		<footer>
-			
-		</footer>
+		<?php include "footer.php"; ?>
+		
 	</body>
 </html>
 

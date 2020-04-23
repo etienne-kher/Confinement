@@ -38,12 +38,12 @@
 								<span class="input-item">
 								<i class="fa fa-user-circle"></i>
 								</span>
-								<input class="form-input" id="txt-input" type="text" name="login" placeholder="LOGIN" required>
+								<input class="form-input" id="txt-input" type="text" name="login" placeholder="LOGIN">
 							<br>
 							<span class="input-item">
 								<i class="fa fa-key"></i>
 							</span>
-							<input class="form-input" type="password" placeholder="MOT DE PASSE" id="pwd"  name="passe" required>
+							<input class="form-input" type="password" placeholder="MOT DE PASSE" id="pwd"  name="passe">
 							<span>
 								<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"><img src="images/passe.png" width="17px"></i>
 							</span>

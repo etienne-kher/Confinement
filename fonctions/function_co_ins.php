@@ -20,7 +20,7 @@
                     $nom = $_POST['nom'];
 					
 					$connexion = mysqli_connect($this->host, $this->username, $this->password, $this->db);
-					var_dump($connexion);
+					
 					
 					if($passe == $passe2)
 					{
@@ -62,14 +62,14 @@
 							}
 							else
 							{
-                                ?><script type="text/javascript"> alert('L\'adresse email $mail est déjà utilisé'); </script>
+                                ?><script type="text/javascript"> alert('Cette adresse mail est déjà utilisé'); </script>
                                 <?php 
                             }
                                 
 						}
 						else
 						{
-                            ?><script type="text/javascript"> alert('L\'adresse email $mail n\'est pas valide'); </script>
+                            ?><script type="text/javascript"> alert('L\'adresse email n\'est pas valide'); </script>
                             <?php 
                         
                         }
@@ -88,12 +88,12 @@
                     <?php 
                 }
                     
+				if(isset($_POST["Connexion"])) 
+				{
+					header("location:connexion.php");
+				}
 			}
 
-			if(isset($_POST["connexion"]))
-			{
-				header("location:connexion.php");
-			}
         }
         
         public function connexion()

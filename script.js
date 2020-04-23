@@ -1,10 +1,10 @@
 function show() {
-    var p = document.getElementsByid('pwd');
+    var p = document.getElementById('pwd');
     p.setAttribute('type', 'text');
 }
 
 function hide() {
-    var p = document.getElementsByid('pwd');
+    var p = document.getElementById('pwd');
     p.setAttribute('type', 'password');
 }
 
@@ -19,4 +19,6 @@ document.getElementById("eye").addEventListener("click", function () {
         hide();
     }
 }, false);
+
+
 
