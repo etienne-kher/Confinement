@@ -16,7 +16,7 @@
 
 	
 	->usine(1= 10 travailleur)
-	->hopital (1 = 20 medecin)
+	->hopital (1 = 20 medecin production +respirateur)
 	->laboratoire( augmente production masque*1.1  1= 10sc )
 	->service comunication(1 persone vaciné toute les 30 s)
 	
@@ -29,19 +29,22 @@
 	ptotal=1000;
 	ptquar=998
 	
+
 	masque=0;
 	respirateur=0;
 	vaccin=0;
 
-	travailleur=1;
-	medecin=1;
-	scientifique=0;
-	comuniquant=0;
+	maxbat=20;
 
-	usine=1;
-	hopital=1
-	laboratoire=0;
-	servcom=0;
+	travailleur=[1,1,"nbtrav","p"];
+	medecin=[1,3,"nbmed","p"];
+	scientifique=[0,5,"nbsci","p"];
+	comuniquant=[0,10,"nbcom","p"];
+
+	usine=[1,50,"nbusine","b"];
+	hopital=[1,100,"nbhop","b"];
+	laboratoire=[0,300,"nblab","b"];
+	servcom=[0,500,"nbcamp","b"];
 	
 	coro=0;
 	//geris=0;
@@ -53,7 +56,7 @@
 		setInterval( masqueplus, 10000);
 		setInterval( mort, 30000);
 		setInterval( resp, 40000);  
-		setInterval(cont,20000);  	
+		setInterval(cont,10000);  	
 	}
 	function tp()
 	{
@@ -62,27 +65,34 @@
 	}
 	function masqueplus()
 	{	
-		masque=masque+travailleur;
+		masque=masque+travailleur[0];
 		window.document.getElementById('nbmasq').innerHTML=masque;
 		console.log(masque);
 	}
 	function mort()
 	{
+		
 		if(coro>=respirateur)
 		{	
 			dcd=coro-respirateur;
-			ptotal=-dcd;
-
-			ptquar=-dcd;
+			console.log("dcd="+dcd);
+			ptotal-=dcd;
+			ptquar-=dcd;
+			respirateur=0;
 		}
-				window.document.getElementById('ptotal').innerHTML=ptotal;
-		ptquar--;
+		else
+		{
+			respirateur-=coro;
+		}
+		window.document.getElementById('ptotal').innerHTML=ptotal;
 		window.document.getElementById('pquar').innerHTML=ptquar;
+		window.document.getElementById('nbresp').innerHTML=respirateur;
+		
 	}
 
 	function resp()
 	{
-		respirateur++;
+		respirateur=respirateur+Math.round(1*(medecin[0]*0.75));
 		window.document.getElementById('nbresp').innerHTML=respirateur;
 	}
 	function cont()
@@ -90,5 +100,73 @@
 		coro++;
 	}
 
+	function ajouter(x)
+	{
+		if (x[3]=="p") 
+			{
+				switch(x[2])
+				{
+					case 'nbtrav':
+    				bat=usine[0];
+    				break;
+    				case 'nbmed':
+    				bat=hopital[0];
+    				break;
+    				case 'nbsci':
+    				bat=laboratoire[0];
+    				break;
+    				case 'nbcom':
+    				bat=servcom[0];
+    				break;
+				}
+				if(masque>=x[1] && x[0]<maxbat*bat)
+				{	masque-=x[1];
+					x[0]++;
+					window.document.getElementById('nbmasq').innerHTML=masque;
+					window.document.getElementById(x[2]).innerHTML=x[0];
+					ptquar--;
+					window.document.getElementById('pquar').innerHTML=ptquar;
+				}
+			}
+			else
+			{
+				if(masque>=x[1])
+				{
+					masque-=x[1];
+					x[0]++;
+					window.document.getElementById('nbmasq').innerHTML=masque;
+					window.document.getElementById(x[2]).innerHTML=x[0];
+				}
+			}	
+	/*
+		switch(x[2])
+		{
+			case 'nbtrav':
+    		bat=usine[0];
+    		break;
+    		case 'nbmed':
+    		bat=hopital[0];
+    		break;
+    		case 'nbsci':
+    		bat=laboratoire[0];
+    		break;
+    		case 'nbcom':
+    		bat=servcom[0];
+    		break;
+		}
+		if(masque>=x[1]&& x[0]<maxbat*bat)
+		{
+			masque-=x[1];
+			x[0]++;
+			window.document.getElementById('nbmasq').innerHTML=masque;
+			window.document.getElementById(x[2]).innerHTML=x[0];
+			if (x[3]=="p") 
+			{	
+				ptquar--;
+				window.document.getElementById('pquar').innerHTML=ptquar;
+			}
+
+		}
+	*/}
 
 jeu();
