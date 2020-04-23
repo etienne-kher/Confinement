@@ -115,3 +115,122 @@
     color: #5F807D;
     font-size: 11px;
 }
+
+/* PAGE ORIGAMI */
+
+
+/* MAIN */
+
+
+#main-origami
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MAIN GAUCHE */
+
+
+#main-gauche-origami
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+
+.v-origami
+{
+    width: 55%;
+}
+
+
+.h5-origami
+{
+    color: #E7AB57;
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: -2%;
+}
+
+
+.h5-forme
+{
+    color: #CC9E80;
+    font-size: 17px;
+}
+
+
+.p1-origami
+{
+    color: #5F807D;
+    font-size: 13px;
+    text-align: center;
+    margin: 5% 21%;
+}
+
+
+.a-origami1
+{
+    color: #F0D66E;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+#a-origami2
+{
+    color: #AAC6A1;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* MAIN DROITE */
+
+
+#main-droite-origami
+{
+    width: 50%;
+    min-height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/origami.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#h3-origami
+{
+    text-align: center;
+    color: #CC9E80;
+    font-size: 25px;
+}
+
+
+#h3-artvisuel
+{
+    color: #E7AB57;
+    font-size: 19px;
+}
+
+
+#p2-origami
+{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
