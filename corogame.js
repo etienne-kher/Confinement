@@ -28,10 +28,11 @@
 	seconde=0;
 	ptotal=1000;
 	ptquar=998
-	
-
+	pmort=0;
+	pvac=0;
 	masque=0;
 	respirateur=0;
+	decvac=false;
 	vaccin=0;
 
 	maxbat=20;
@@ -54,14 +55,30 @@
 		
 		setInterval( tp, 1000);
 		setInterval( masqueplus, 10000);
+		setInterval(prodvac,10000);
+		setInterval(vacination,20000)
 		setInterval( mort, 30000);
 		setInterval( resp, 40000);  
 		setInterval(cont,10000);  	
 	}
 	function tp()
 	{
-		this.seconde++;
+		seconde++;
 		console.log(seconde);
+		if(scientifique[0]>=25)
+		{
+			decvac=true;
+			//signaler vacin disponible
+		}
+
+		if (ptquar <= 0 && pvac > 0) 
+		{
+			win();
+		}
+		if(ptquar <= 0 && pvac<=0)
+		{
+			loser();
+		}
 	}
 	function masqueplus()
 	{	
@@ -75,7 +92,6 @@
 		if(coro>=respirateur)
 		{	
 			dcd=coro-respirateur;
-			console.log("dcd="+dcd);
 			ptotal-=dcd;
 			ptquar-=dcd;
 			respirateur=0;
@@ -83,10 +99,13 @@
 		else
 		{
 			respirateur-=coro;
+			dcd=0;
 		}
+		pmort+=dcd;
 		window.document.getElementById('ptotal').innerHTML=ptotal;
 		window.document.getElementById('pquar').innerHTML=ptquar;
 		window.document.getElementById('nbresp').innerHTML=respirateur;
+		window.document.getElementById('pmort').innerHTML=pmort;
 		
 	}
 
@@ -138,35 +157,49 @@
 					window.document.getElementById(x[2]).innerHTML=x[0];
 				}
 			}	
-	/*
-		switch(x[2])
-		{
-			case 'nbtrav':
-    		bat=usine[0];
-    		break;
-    		case 'nbmed':
-    		bat=hopital[0];
-    		break;
-    		case 'nbsci':
-    		bat=laboratoire[0];
-    		break;
-    		case 'nbcom':
-    		bat=servcom[0];
-    		break;
+	}
+	function prodvac()
+	{
+		if(decvac==true)
+		{	
+			console.log("vac="+vaccin);
+			vaccin=Math.round(0.4*scientifique[0])+vaccin;
+			console.log("vac="+vaccin);
+			window.document.getElementById('nbvac').innerHTML=vaccin;
 		}
-		if(masque>=x[1]&& x[0]<maxbat*bat)
+	}
+	function vacination()
+	{
+		volont=Math.round(comuniquant[0]*0.6);
+		console.log("vol="+volont);
+		/*
+		vaccin-=volont;
+		pvac+=volont;
+		pquar-=volont;*/
+		if(vaccin>=volont)
 		{
-			masque-=x[1];
-			x[0]++;
-			window.document.getElementById('nbmasq').innerHTML=masque;
-			window.document.getElementById(x[2]).innerHTML=x[0];
-			if (x[3]=="p") 
-			{	
-				ptquar--;
-				window.document.getElementById('pquar').innerHTML=ptquar;
-			}
-
+			vaccin-=volont;
+			pvac+=volont;
+			ptquar-=volont;
 		}
-	*/}
+		else
+		{	
+			volont=vaccin;
+			vaccin=0;
+			pvac+=volont;
+			ptquar-=volont;
 
+		}	
+		window.document.getElementById('nbvac').innerHTML=vaccin;
+		window.document.getElementById('pquar').innerHTML=ptquar;
+		window.document.getElementById('pvac').innerHTML=pvac;
+	}
+	function win()
+	{
+		
+	}
+	function loser()
+	{
+
+	}
 jeu();
