@@ -1,5 +1,10 @@
 /*------------------------------------------------HEADER GENERAL---------------------------------------------------------*/
 
+body {
+    margin: 0;
+    padding-bottom: 120px;
+}
+
 .sectionhead {
     min-height: 500px;
     background-attachment: fixed;
@@ -84,3 +89,166 @@
 }
 
 .hum {}
+
+
+/*---------------------------------------------- FIL DE DISCUSSION ----------------------------------------------*/
+
+.fil {
+    background-image: url('images/commfond.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+}
+
+.position {
+    display: flex;
+    align-items: baseline;
+}
+
+
+/*DEROULANTS*/
+
+details {
+    flex-direction: row;
+    margin-top: 100px;
+    margin-left: 130px;
+    width: 75%;
+    min-height: 20px;
+    max-width: 450px;
+    padding: 45px 70px 45px 45px;
+    font-size: 22px;
+    border-radius: 15px;
+    background-color: rgba(11, 198, 227, 0.472);
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+details[open] {
+    min-height: 500px;
+}
+
+details p {
+    font-weight: 300;
+    line-height: 20px;
+}
+
+summary {
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+.control-icon {
+    transition: .3s ease;
+    pointer-events: none;
+}
+
+.control-icon-close {
+    display: none;
+}
+
+details[open] .control-icon-close {
+    display: initial;
+    transition: .3s ease;
+}
+
+details[open] .control-icon-expand {
+    display: none;
+}
+
+details[open] summary:hover::after {
+    animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.appinter {}
+
+.plus {}
+
+.encore {
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+
+/*FORM*/
+
+.formmess {
+    font-family: 'Acme', sans-serif;
+    font-size: 150%;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.apparence {
+    background-color: rgba(11, 198, 227, 0.472);
+    border-color: rgba(11, 198, 227, 0.472);
+    height: 50px;
+    font-size: 80%;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.aussi {
+    border-color: #d5b26e;
+    text-align: center;
+}
+
+
+/*------------------------------------------------FOOTER GENERAL---------------------------------------------------------*/
+
+.footer {
+    background-color: #F0D66E;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer p:hover .premier {
+    display: none;
+}
+
+.footer p:hover .deuxieme {
+    display: inline;
+}
+
+.deuxieme {
+    display: none;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------FOOTER GENERAL---------------------------------------------------------*/

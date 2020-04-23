@@ -78,6 +78,7 @@ switch ($_SERVER['REQUEST_URI']) {
     <a href="index.php">Accueil</a>
     <a href="coronaclicker.php">CoronaClicker</a>
     <a href="kitchen.php">Kitchen</a>
+    <a href="origami.php">Origami</a>
     <?php
                 if(!isset($_SESSION['login']))
                 { 
