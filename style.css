@@ -43,3 +43,108 @@
 {
 	
 }
+/* page Michael */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+#cuis{
+    background-color: #CC9E80;
+    
+    
+}
+#fullkitchen
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kitch
+{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin: 10px;
+    font-size: 40px;
+}
+.txt1{font-family: 'Acme', sans-serif;;
+    text-align: center;
+}
+.int{
+    font-family: arial;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+
+.mafe
+{
+    display: flex;
+    flex-direction: row;
+}
+.imgmaf img
+{
+    border-radius: 50px 50px 50px 50px ;
+}
+
+.txtmaf
+{
+    margin-left: 10px;
+    font-family: 'Acme', sans-serif;
+}
+.aloko
+{
+    display: flex;
+    flex-direction: row;
+}
+#imgalok img
+{
+    border-radius: 50px 50px 50px 50px ;
+}
+.tktalok
+{
+    font-family: 'Acme', sans-serif;
+    margin-left: 10px; 
+}
+.fulm
+{
+    display: flex;
+    flex-direction: row ;
+}
+#egyma img
+{
+    border-radius: 50px 50px 50px 50px ;
+}
+
+.txtful
+{
+    margin-left: 10px;
+    font-family: 'Acme', sans-serif;
+}
+.titr
+{
+    
+    text-decoration: underline;
+    text-align: center;
+}
+#atievideo
+{
+    text-align: center;
+}
+#atievideo iframe
+{
+    text-align: center;
+}
+    
+
+.linkc
+{     
+   
+    text-decoration: none;
+    color:#F0D66E;
+    
+}
