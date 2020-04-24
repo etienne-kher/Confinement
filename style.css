@@ -778,7 +778,7 @@ details[open] summary:hover::after {
 }
 
 #corogame
-{   border: 1px solid black;
+{   box-shadow: 3px 3px 5px black;
     background:url('images/back-coro.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
