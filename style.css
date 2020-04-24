@@ -757,6 +757,8 @@ details[open] summary:hover::after {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2vw;
     background-color: cornsilk;
+    padding: 1%;
+    margin-top: 1%;
 }
 
 .c-tttt
@@ -767,6 +769,7 @@ details[open] summary:hover::after {
     font-size: 2vw;
     color: aliceblue;
     text-shadow: 1px 1px 3px black;
+    margin-top: 2%;
 }
 
 #c-win>p,#c-los>p
@@ -852,6 +855,27 @@ details[open] summary:hover::after {
     flex-direction:row;
     font-size: 2vw;
 }
+.hum:hover img
+{
+    animation:c-anim 1s ease-in-out infinite both;
+}
+
+
+@keyframes c-anim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .c-secin
 {
     width: 100%;
