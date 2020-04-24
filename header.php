@@ -5,7 +5,6 @@ session_start();
 if (isset($_GET['deco'])) {
     session_destroy();
 }
-
 switch ($_SERVER['REQUEST_URI']) {
     case '/Confinement/index.php':
         echo "<style type=\"text/css\">
@@ -47,7 +46,15 @@ switch ($_SERVER['REQUEST_URI']) {
             </style>";
     break;
 
-    case '/Confinement/connection.php':
+    case '/Confinement/connexion.php':
+        echo "<style type=\"text/css\">
+            .header {
+                background-image: url(images/connection.jpg);
+            }
+            </style>";
+    break;
+
+    case '/Confinement/inscription.php':
         echo "<style type=\"text/css\">
             .header {
                 background-image: url(images/connection.jpg);
@@ -83,7 +90,7 @@ switch ($_SERVER['REQUEST_URI']) {
                 if(!isset($_SESSION['login']))
                 { 
             ?>
-    <a href="connection.php">Sign In/Sign Up</a>
+    <a href="connexion.php">Sign In/Sign Up</a>
 
     <?php
                 }

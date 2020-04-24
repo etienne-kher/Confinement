@@ -47,48 +47,223 @@ body {
 }
 
 
-/*------------------------------------------------CORONACLICKER---------------------------------------------------------*/
 
-#corogame {
-    background-color: pink;
-    height: 80vh;
-    width: 90vw;
+
+/*INDEX*/
+
+#body_index
+{
+  margin: 0;
+  background-image: url("images/index.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+#section_index
+{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#h1_acc
+{
+
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;
+	color: azure;
+	text-shadow: 10px 10px 11px black;
+	padding-left: 100px;
+	text-align: center;
+	height: 5em; /* hauteur du parent */
+    line-height: 5em; /* hauteur de ligne (identique) */
+    white-space: nowrap; /* interdiction de passer à la ligne */
+}
+
+/*CONNEXION*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#bodyconnexion
+ {
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+	background-image: linear-gradient(to top, #E7AB57 0%, #AAC6A1 100%);
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+	font-family: 'Amatic SC', cursive;
+    opacity: .95;
+}
+
+
+#form_connexion {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E7AB57 50%, #AAC6A1 50%);
+}
+
+#form_connexion .con {
+    display: -webkit-flex;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-#clickzone {
-    background-color: green;
-    height: 80vh;
-    width: 25vw;
-}
-
-#mid {
-    background-color: cyan;
-    height: 80vh;
-    width: 25vw;
-}
-
-#right {
-    background-color: red;
-    height: 80vh;
-    width: 25vw;
-}
-
-.c-titre {
-    width: 100%;
-    display: inline-block;
+.head-form {
+    margin: 2% auto 10% auto;
     text-align: center;
 }
 
-.sous-zone {
-    width: 100%;
-    height: 90%;
+.head-form h2 {
+    font-size: 250%;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #3e403f;
 }
 
-.hum {}
+.head-form p {
+	letter-spacing: 0.05em;
+	
+
+}
+
+#p_headerco{
+	font-family: 'Amatic SC', cursive;
+}
+
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#eye {
+    background-color: rgba(51, 51, 51, 0);
+    color: #333;
+  
+    margin: 5.9px 0 0 0;
+    margin-left: -20px;
+    padding: 15px 9px 19px 0px;
+    border-radius: 0px 5px 5px 0px;
+  
+    float: right;
+    position: relative;
+    right: -1%;
+    top: 1%;
+    z-index: 5;
+    
+	cursor: pointer;
+	
+}
+
+.form-input{
+    width: 250px;
+    height: 50px;
+  
+    margin-top: 2%;
+    padding: 15px;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+    
+}
+#txt-input {width: 250px;}
+
+.form-input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+.button_connexion {
+    display: inline-block;
+    color: #252537;
+  
+    width: 280px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+.submits {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+
+.frgt-pass {background: transparent;}
+
+
+.sign-up {background: #B8F2E6;}
+
+
+.button_connexion:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+
+.button_connexion:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+#img_passe{
+	width: 5px;
+}
+
+#connexion_submit{
+	margin-right: 4px;
+}
+
+/*INSCRIPTION*/ 
+
+#body_inscription{
+	background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+	background-image: linear-gradient(to top, #AAC6A1 0%, #E7AB57 100%);
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+	font-family: 'Amatic SC', cursive;
+    opacity: .95;
+
+}
 
 
 /*---------------------------------------------- FIL DE DISCUSSION ----------------------------------------------*/
@@ -217,6 +392,111 @@ details[open] summary:hover::after {
     text-align: center;
 }
 
+/* page Michael */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cuis {
+    background-color: #CC9E80;
+}
+
+#fullkitchen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kitch {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.txt1 {
+    font-family: 'Acme', sans-serif;
+    ;
+    text-align: center;
+}
+
+.int {
+    font-family: arial;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.mafe {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgmaf img {
+    border-radius: 50px 50px 50px 50px;
+}
+
+.txtmaf {
+    margin-left: 10px;
+    font-family: 'Acme', sans-serif;
+}
+
+.aloko {
+    display: flex;
+    flex-direction: row;
+}
+
+#imgalok img {
+    border-radius: 50px 50px 50px 50px;
+}
+
+.tktalok {
+    font-family: 'Acme', sans-serif;
+    margin-left: 10px;
+}
+
+.fulm {
+    display: flex;
+    flex-direction: row;
+}
+
+#egyma img {
+    border-radius: 50px 50px 50px 50px;
+}
+
+.txtful {
+    margin-left: 10px;
+    font-family: 'Acme', sans-serif;
+}
+
+.titr {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#atievideo {
+    text-align: center;
+}
+
+#atievideo iframe {
+    text-align: center;
+}
+
+.linkc {
+    text-decoration: none;
+    color: #F0D66E;
+    transition: letter-spacing 1s;
+    text-shadow: 1px 1px 1px black;
+}
+
+.linkc:hover
+{
+    letter-spacing: 3px;
+}
 
 /*------------------------------------------------FOOTER GENERAL---------------------------------------------------------*/
 
@@ -248,7 +528,345 @@ details[open] summary:hover::after {
 
 .footer a {
     text-decoration: none;
+
 }
 
 
-/*------------------------------------------------FOOTER GENERAL---------------------------------------------------------*/
+
+/* PAGE PROFIL */
+
+
+#body-profil
+{
+	background-color: #E7AB57;
+}
+
+
+#main-profil
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#form-profil
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+    border: 15px solid #F0D66E;
+    background-color: white;
+    margin-top: 3%;
+}
+
+.label-profil
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    color: #E7AB57;
+    margin: 1% 0;
+    
+}
+
+.input-profil
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E7AB57;
+    background-color: white;
+    width: 45%;
+    height: 25%;
+    margin: 3% 0;
+    text-align: center;
+    color: #5F807D;
+    font-size: 15px;
+}
+
+/* PAGE ORIGAMI */
+
+
+/* MAIN */
+
+
+#main-origami
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MAIN GAUCHE */
+
+
+#main-gauche-origami
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+
+.v-origami
+{
+    width: 55%;
+}
+
+
+.h5-origami
+{
+    color: #E7AB57;
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: -2%;
+}
+
+
+.h5-forme
+{
+    color: #CC9E80;
+    font-size: 17px;
+}
+
+
+.p1-origami
+{
+    color: #5F807D;
+    font-size: 13px;
+    text-align: center;
+    margin: 5% 21%;
+}
+
+
+.a-origami1
+{
+    color: #F0D66E;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+#a-origami2
+{
+    color: #AAC6A1;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* MAIN DROITE */
+
+
+#main-droite-origami
+{
+    width: 50%;
+    min-height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/origami4.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#h3-origami
+{
+    text-align: center;
+    color: #CC9E80;
+    font-size: 25px;
+}
+
+
+#h3-artvisuel
+{
+    color: #E7AB57;
+    font-size: 19px;
+}
+
+
+#p2-origami
+{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+
+/*Coronagame*/
+#cor-body
+{
+   background-color: #CC9E80; 
+}
+#c-main
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CC9E80;
+    padding-bottom: 3%; 
+    min-height: 70vh;
+}
+#c-title
+{
+    font-family: 'Acme', sans-serif;
+    font-size: 3VW;
+    color: #AAC6A1;
+    text-shadow: 2px 2px 3px black;
+}
+#c-deb>p
+{
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 1%;
+}
+#c-deb>ul
+{
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+#c-deb>button,#c-win>button,#c-los>button
+{
+    margin: auto;
+    display: block;
+    margin-bottom: 2%; 
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2vw;
+    background-color: cornsilk;
+}
+
+.c-tttt
+{
+    box-shadow: 2px 2px 3px black;
+    background-color: #5F807D;
+    width: 80%;
+    font-size: 2vw;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px black;
+}
+
+#c-win>p,#c-los>p
+{
+    text-align: center;
+}
+
+#corogame
+{   border: 1px solid black;
+    background:url('images/back-coro.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 85vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-shadow: 1px 1px 3px #FFF;
+    padding: 2%;
+}
+#corogame>div
+{
+    box-shadow: 2px 2px 3px black;
+    transition: box-shadow 1s ,transform 1s;
+    padding: 1%;
+}
+
+#corogame>div:hover
+{
+    box-shadow: 2px 2px 10px black;
+    transform: scale(1.01);
+}
+
+#clickzone
+{
+    background-color: #D2C8C199;
+    height: 80vh;
+    width: 25vw;
+}
+
+#mid
+{
+    background-color: #D2C8C199;
+    height: 80vh;
+    width: 25vw;
+}
+
+#right
+{
+    background-color: #D2C8C199;
+    height: 80vh;
+    width: 25vw;
+}
+.c-titre
+{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.5vw;
+    padding: 1%;
+}
+#cz1>p
+{
+    font-size: 1.7vw;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.sous-zone
+{
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.hum
+{
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    font-size: 2vw;
+}
+.c-secin
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    flex-direction: column;
+}
+.c-secin>img
+{
+    width: 50%;
+}
+.c-numb
+{
+    font-size: 3vw;
+}
+
+

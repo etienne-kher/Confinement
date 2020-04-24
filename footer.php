@@ -28,7 +28,12 @@ switch ($_SERVER['REQUEST_URI']) {
         ";
     break;
 
-    case '/Confinement/connection.php':
+    case '/Confinement/connexion.php':
+        echo "<p>Page faite par : <a class=\"premier\" href=\"https://github.com/julia-denivet\"  target=\"Blank\">Julia DENIVET.</a><a class=\"deuxieme\" href=\"https://github.com/julia-denivet\"  target=\"Blank\">aller explorer le GitHub.</a></p>
+        ";
+    break;
+
+    case '/Confinement/inscription.php':
         echo "<p>Page faite par : <a class=\"premier\" href=\"https://github.com/julia-denivet\"  target=\"Blank\">Julia DENIVET.</a><a class=\"deuxieme\" href=\"https://github.com/julia-denivet\"  target=\"Blank\">aller explorer le GitHub.</a></p>
         ";
     break;
